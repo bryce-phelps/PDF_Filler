@@ -418,10 +418,7 @@ var fieldJson = [
 ];
 
 var FDFData = pdfFiller.convFieldJson2FDF( fieldJson );
-//console.log(FDFData)
-// console.log(sourcePDF);
-// console.log(destinationPDF);
-// console.log(FDFData);
+
 pdfFiller.fillFormWithFlatten( sourcePDF, destinationPDF, FDFData, shouldFlatten, function(err){
   console.log("IN FUNCTION")
   if(err){
