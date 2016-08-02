@@ -11,9 +11,6 @@ app.listen(4000, function(){
   console.log("Example app listening on port 4000");
 });
 
-
-
-
 var sourcePDF = "start.pdf";
 var destinationPDF = "end.pdf";
 var shouldFlatten = true;
@@ -422,9 +419,9 @@ var fieldJson = [
 
 var FDFData = pdfFiller.convFieldJson2FDF( fieldJson );
 //console.log(FDFData)
-console.log(sourcePDF);
-console.log(destinationPDF);
-console.log(FDFData);
+// console.log(sourcePDF);
+// console.log(destinationPDF);
+// console.log(FDFData);
 pdfFiller.fillFormWithFlatten( sourcePDF, destinationPDF, FDFData, shouldFlatten, function(err){
   console.log("IN FUNCTION")
   if(err){
