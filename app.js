@@ -14,7 +14,7 @@ app.listen(4000, function(){
 var sourcePDF = "start.pdf";
 var destinationPDF = "end.pdf";
 var shouldFlatten = true;
-var fieldJson = [
+var data = [
     {
         "title" : "AM Delivery",
         "fieldfieldType": "button",
@@ -53,7 +53,7 @@ var fieldJson = [
     {
         "title" : "Bill to Phone #",
         "fieldType": "Text",
-        "fieldValue": "333-333-3333"
+        "fieldValue": "111-111-1111"
     },
     {
         "title" : "Bill to State/Prov",
@@ -417,7 +417,7 @@ var fieldJson = [
     }
 ];
 
-var FDFData = pdfFiller.convFieldJson2FDF( fieldJson );
+var FDFData = pdfFiller.convFieldJson2FDF( data );
 
 pdfFiller.fillFormWithFlatten( sourcePDF, destinationPDF, FDFData, shouldFlatten, function(err){
   console.log("IN FUNCTION")
